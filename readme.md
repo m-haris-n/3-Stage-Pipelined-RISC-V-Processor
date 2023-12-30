@@ -15,7 +15,7 @@ The controller module is in the file `controller.sv`. It handles control singals
 ### Instruction Fetching
 Instruction fetching is done in modules `pc.sv`, `inst_mem.sv` and relevant multiplexers.
 
-### Instruction Fetching
+### Instruction Decoding
 Instruction decoding takes place in the modules `inst_dec.sv`, `imm_gen.sv` and `reg_file.sv`.
 
 ### Execution

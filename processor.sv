@@ -359,6 +359,8 @@ module processor
         .out_y(laddr)
     );
 
+
+
  // ---------- WRITEBACK -------- //
 
     //write back selection for load instructions

@@ -24,11 +24,11 @@ module tb_processor();
             #5 clk = 0;
             iter += 1;
         $display("CYCLE %b\n", iter);
-        $display("x5: %b", dut.reg_file_i.reg_mem[5]);
-        $display("x6: %b", dut.reg_file_i.reg_mem[6]);
-        $display("x7: %b", dut.reg_file_i.reg_mem[7]);
-        $display("x10: %b", dut.reg_file_i.reg_mem[10]);
-        $display("x11: %b\n", dut.reg_file_i.reg_mem[11]);
+        $display("x8: %b", dut.reg_file_i.reg_mem[8]);
+        $display("x9: %b", dut.reg_file_i.reg_mem[9]);
+        // $display("x7: %b", dut.reg_file_i.reg_mem[7]);
+        // $display("x10: %b", dut.reg_file_i.reg_mem[10]);
+        // $display("x11: %b\n", dut.reg_file_i.reg_mem[11]);
 
             // $display("pc_in: %b", dut.pc_in);
             // $display("pc_d: %b", dut.pc_out_d);
@@ -61,10 +61,10 @@ module tb_processor();
         rst = 1;
         #10;
         rst = 0;
-        #500;
+        #900;
 		$display("datamem:%b\n", dut.data_mem_i.data_mem[0]);
-        $display("x10: %b", dut.reg_file_i.reg_mem[10]);
-        $display("x2: %b", dut.reg_file_i.reg_mem[2]);
+        $display("x8: %b", dut.reg_file_i.reg_mem[8]);
+        $display("x9: %b", dut.reg_file_i.reg_mem[9]);
         $display("x3: %b", dut.reg_file_i.reg_mem[3]);
         $display("x4: %b", dut.reg_file_i.reg_mem[4]);
         $display("x5: %b", dut.reg_file_i.reg_mem[5]);
@@ -80,6 +80,7 @@ module tb_processor();
     initial
     begin
         $readmemh("inst.mem", dut.inst_mem_i.mem);
+        $readmemh("data.mem", dut.data_mem_i.data_mem);
         $readmemb("rf.mem", dut.reg_file_i.reg_mem);
     end
 
